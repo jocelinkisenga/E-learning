@@ -8,7 +8,7 @@ Build an api that will help front-end developpers to retreive data from the back
 ## Installation
 To install this application run 
 ```git
-git clone url_of_the_repo
+git clone https://github.com/jocelinkisenga/E-learning.git
 ```
 And navigate to the application folder then run 
 ```git
