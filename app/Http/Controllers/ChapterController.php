@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Chapter;
 
 class ChapterController extends Controller
 {
        public function index (){
 
-        $courses = Chapter::all();
-        return response()->json(['course'=>$courses],200);
+        $chapters = Chapter::all();
+        return response()->json(['course'=>$chapters],200);
     }
 
     public function store(){
@@ -24,7 +25,7 @@ class ChapterController extends Controller
     }
 
     public function show(int $id){
-        $course = Chapter::find($id);
-            return response()->json(['course'=>$course],201);
+        $chapter = Chapter::find($id);
+            return response()->json(['course'=>$chapter],201);
     }
 }
