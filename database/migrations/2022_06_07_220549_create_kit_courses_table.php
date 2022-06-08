@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('kit_courses', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->('course_id');
+            $table->foreignId('course_id');
             $table->timestamps();
         });
     }
