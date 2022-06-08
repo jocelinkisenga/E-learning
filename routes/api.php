@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    //return $request->user();
+//});
 
 Route::get('/course',[App\Http\Controllers\CourseController::class, 'index']);
 Route::post('/course',[App\Http\Controllers\CourseController::class, 'store']);
@@ -25,3 +25,7 @@ Route::get('/course/{id}',[App\Http\Controllers\CourseController::class, 'show']
 Route::get('/chapter',[App\Http\Controllers\ChapterController::class, 'index']);
 Route::post('/chapter',[App\Http\Controllers\ChapterController::class, 'store']);
 Route::get('/chapter/{id}',[App\Http\Controllers\ChapterController::class, 'show']);
+// routes/api.php
+Route::post('/register', [App\Http\Controllers\AuthController::class, 'register']);
+Route::post('/login', [App\Http\Controllers\AuthController::class, 'login']);
+Route::get('/user', [App\Http\Controllers\AuthController::class, 'user'])->middleware('auth:sanctum');
