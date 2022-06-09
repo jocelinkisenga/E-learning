@@ -50,7 +50,7 @@ class AuthController extends Controller
     }
     
 
-        public function user(Request $request) {
+        public function me(Request $request) {
             return $request->user();
         }
 }

@@ -27,5 +27,8 @@ Route::post('/chapter',[App\Http\Controllers\ChapterController::class, 'store'])
 Route::get('/chapter/{id}',[App\Http\Controllers\ChapterController::class, 'show']);
 // routes/api.php
 Route::post('/register', [App\Http\Controllers\AuthController::class, 'register']);
-Route::post('/login', [App\Http\Controllers\AuthController::class, 'login']);
-Route::get('/user', [App\Http\Controllers\AuthController::class, 'user'])->middleware('auth:sanctum');
+Route::post('/login', [App\Http\Controllers\AuthController::class, 'login'])->name('login');
+
+Route::get('/user', [App\Http\Controllers\ProfileController::class, 'user_courses']);
+
+Route::post('/me', [App\Http\Controllers\AuthController::class, 'me'])->middleware('auth:sanctum');
