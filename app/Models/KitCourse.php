@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
+use App\Models\Course;
 
 class KitCourse extends Model
 {
@@ -14,6 +16,6 @@ class KitCourse extends Model
         return $this->belongsTo(User::class);
     }
     public function course(){
-        return $this->belongsTo()
+        return $this->belongsTo(Course::class);
     }
 }
