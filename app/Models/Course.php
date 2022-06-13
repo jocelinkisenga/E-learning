@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Chapter;
 use App\Models\User;
+use App\Models\Kitcourse;
 
 class Course extends Model
 {
@@ -18,5 +19,9 @@ class Course extends Model
     }
     public function user(){
         return $this->belongsTo(User::class);
+    }
+
+    public function kitcourses(){
+        return $this->hasMany(Kitcourse::class);
     }
 }
