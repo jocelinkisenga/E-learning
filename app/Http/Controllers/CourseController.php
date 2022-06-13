@@ -13,9 +13,9 @@ class CourseController extends Controller
         return response()->json(['course'=>$courses],200);
     }
 
-    public function store(){
+    public function store(Request $request){
         Course::create([
-                'course_id'=>$request->course_id,
+                'owner_id'=>$request->user_id,
                 'title'=>$request->title,
                 'description'=>$request->description,
                 'path_image'=>$request->path_image,
