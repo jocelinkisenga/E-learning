@@ -38,14 +38,15 @@ Route::post('/course',[App\Http\Controllers\CourseController::class, 'store']);
 });
 
 Route::middleware(['auth:sanctum'])->group(function(){
-    Route::post('/askPermission/{id}',[App\Http\Controllers\PermissionController::class, 'store']);
+    Route::post('/permissions',[App\Http\Controllers\PermissionController::class, 'store']);
     Route::post('/me', [App\Http\Controllers\AuthController::class, 'me']);
     Route::post('/subscribe/{id}',[App\Http\Controllers\KitCourseController::class, 'store']);
     Route::get('/subscribe',[App\Http\Controllers\KitCourseController::class, 'index']);
     Route::get('/user', [App\Http\Controllers\ProfileController::class, 'user_courses']);
 });
 
-Route::middleware(['auth','admin'])->group(function(){
-    Route::put('/permission',[App\Http\Controllers\PermissionController::class, 'edit']);
+Route::middleware(['auth:sanctum','admin'])->group(function(){
+    Route::get('/permissions',[App\Http\Controllers\PermissionController::class, 'index']);
+    Route::put('/permissions',[App\Http\Controllers\PermissionController::class, 'edit']);
     
 });
