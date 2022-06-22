@@ -23,8 +23,13 @@ class PermissionController extends Controller
 
     public function  edit(Request $request){
         $this->userId = Auth::user()->id;
-        $permission = Permission::where('user_id', $this->userId)->update('permis',1);
+        $permission = Permission::whereUser_id($this->userId)->update(['permis'=>1]);
 
         return response()->json(['updated successfully'], 201);
+    }
+
+    public function allowed(){
+        $allowed = Permission::all();
+        return response()->json(['allowed'=>$allowed, 'this users are allowed']);
     }
 }
