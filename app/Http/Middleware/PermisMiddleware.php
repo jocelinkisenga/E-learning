@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use App\Models\Permission;
 use Auth;
-use App\Models\Permission;
+
 
 class PermisMiddleware
 {
@@ -21,18 +21,19 @@ class PermisMiddleware
     {
 
         $userId = Auth::user()->id;
-        $permis = new Permission();
+        $permi = new Permission();
+        $permis = $permi->first()->whereUser_id($userId)->get();
         
 
-        if($permis->whereUser_id($userId)) {
-            if ($permis->permis == true)
+        
+            if ($permis->permis == 1)
             {
                return $next($request);
             }
             else {
 
-                return redirect('/');
+                return redirect(route('home'));
             }
-        }
+        
     }
 }

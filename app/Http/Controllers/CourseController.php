@@ -11,17 +11,19 @@ class CourseController extends Controller
     public function index (){
 
         $courses = Course::all();
-        return response()->json(['course'=>$courses],200);
+        return response()->json(['all courses','course'=>$courses],200);
     }
 
     public function store(Request $request){
+        $fileName = time().'_'.$request->file('image')->getClientOriginalName();
+        $path=$request->file('image')->storeAs('uploads', $fileName, 'public');
+
         $user_id = Auth::user()->id;
         Course::create([
                 'owner_id'=>$user_id,
                 'title'=>$request->title,
                 'description'=>$request->description,
-                'path_image'=>$request->path_image,
-                'path_file'=>$request->path_file
+                'image'=>$request->image,
             ]);
         return response()->json('course created success',201);
     }

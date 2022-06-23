@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //course routes
-Route::get('/course',[App\Http\Controllers\CourseController::class, 'index']);
+Route::get('/course',[App\Http\Controllers\CourseController::class, 'index'])->name('home');
 Route::get('/course/{id}',[App\Http\Controllers\CourseController::class, 'show']);
 
 //chapter routes
@@ -33,7 +33,7 @@ Route::get('/chapter/{id}',[App\Http\Controllers\ChapterController::class, 'show
 Route::post('/register', [App\Http\Controllers\AuthController::class, 'register']);
 Route::post('/login', [App\Http\Controllers\AuthController::class, 'login'])->name('login');
 
-Route::middleware(['auth','permis'])->group(function(){
+Route::middleware(['auth:sanctum','permis'])->group(function(){
 Route::post('/course',[App\Http\Controllers\CourseController::class, 'store']);
 });
 
