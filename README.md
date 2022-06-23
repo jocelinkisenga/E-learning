@@ -84,7 +84,7 @@ To login the end-point is ** /login ** , the end-point will return a bear token 
      ```
 
 ### single course end-point
-To get a single course, use the end point ** /course/id/ ** , with the GET http method
+To get a single course, use the end point <strong> /course/id/ </strong> , with the GET http method
 <strong>result</strong>
 ```javascript
 {
@@ -105,7 +105,16 @@ To get a single course, use the end point ** /course/id/ ** , with the GET http 
     ```
 
   ### create course end-point 
-  to create a course you need first to make a request and let the admin allow you
+  to create a course you need first to make a request and let the admin allow you.
+  The end-point for creating a course is <strong> /course </strong>, with the POST http method.
+  <strong>headers</strong>
+  ```javascript
+  {
+  	title,
+  	description,
+  	image
+  }
+  ```
 
 
 ## requirements
