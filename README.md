@@ -16,14 +16,14 @@ composer install
 ```
 to install composer's dependances
 
-## API DOCS (front-end)
+## API DOCS (end-points)
 
-### Course end-point
+### all Courses end-point
 <p> To fetch all the courses the end-point is ** /courses ** whith the http method GET 
 </p>
 
 <strong>results</strong>
-```
+```javascript
 {
     "0": "all courses",
     "course": [
@@ -60,7 +60,29 @@ to install composer's dependances
       }
      ```
 
+### single course end-point
+To get a single course, use the end point ** /course/id/ ** , with the GET http method
+<strong>result</strong>
+```javascript
+{
+    "0": "all courses",
+    "course": [
+        {
+            "id": 23,
+            "owner_id": 5,
+            "title": "kisenga1@gmail.com",
+            "description": "jocelinkisenga",
+            "number_chapters": null,
+            "created_at": "2022-06-23T13:33:17.000000Z",
+            "updated_at": "2022-06-23T13:33:17.000000Z",
+            "image": "1655991197_téléchargement.jpeg"
+        },
+        ],
+    }
+    ```
 
+  ### create course end-point 
+  to create a course you need first to make a request and let the admin allow you
 
 
 ## requirements
