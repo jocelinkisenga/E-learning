@@ -47,7 +47,7 @@ Route::middleware(['auth:sanctum'])->group(function(){
 
 Route::middleware(['auth:sanctum','admin'])->group(function(){
     Route::get('/non-permis',[App\Http\Controllers\PermissionController::class, 'index']);
-    Route::put('/permissions',[App\Http\Controllers\PermissionController::class, 'edit']);
+    Route::put('/permissions/{id}',[App\Http\Controllers\PermissionController::class, 'edit']);
     Route::get('/permis',[App\Http\Controllers\PermissionController::class, 'allowed']);
     
 });

@@ -26,13 +26,13 @@ class PermisMiddleware
         
 
         
-            if ($permis->permis == 1)
+            if ($permis->user_id == $userId)
             {
                return $next($request);
             }
             else {
 
-                return redirect(route('home'));
+                return response()->json('you are not allowed');
             }
         
     }

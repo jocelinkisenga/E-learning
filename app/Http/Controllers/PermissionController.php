@@ -21,9 +21,9 @@ class PermissionController extends Controller
         return response()->json(['permission created successfull'],201);
     }
 
-    public function  edit(Request $request){
-        $this->userId = Auth::user()->id;
-        $permission = Permission::whereUser_id($this->userId)->update(['permis'=>1]);
+    public function  edit(Request $request, int $id){
+        
+        $permission = Permission::whereUser_id($id)->update(['permis'=>1]);
 
         return response()->json(['updated successfully'], 201);
     }
