@@ -11,7 +11,7 @@ class CourseController extends Controller
     public function index (){
 
         $courses = Course::orderBy('id','desc')->get();
-        return response()->json(['all courses','course'=>$courses],200);
+        return response()->json(['course'=>$courses],200);
     }
 
     public function store(Request $request){
