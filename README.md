@@ -1,6 +1,6 @@
 # E-learning application
 
-<p>This application for the june challenge of the club of developpers</p>
+<p>This application for the june challenge from the club of developpers</p>
 
 ## purpose
 Build an api that will help front-end developpers to retreive data from the backend application
@@ -17,6 +17,29 @@ composer install
 to install composer's dependances
 
 ## API DOCS (end-points)
+
+### register end-point 
+To register the end-point is ** /register ** , the end-point will return a bear token witch will be used for different requests.
+ <div>
+ 	headers :
+ 	```javascript
+ 	{
+ 		name,
+ 		email,
+ 		password
+ 	}
+
+### login end-point 
+To login the end-point is ** /login ** , the end-point will return a bear token witch will be used for different requests.
+ <div>
+ 	headers :
+ 	```javascript
+ 	{
+ 			email,
+ 			password
+ 	}
+ 	```
+ </div>
 
 ### all Courses end-point
 <p> To fetch all the courses the end-point is ** /courses ** whith the http method GET 
