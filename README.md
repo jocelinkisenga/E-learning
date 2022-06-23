@@ -1,8 +1,8 @@
 # E-learning application
 
-<p>challenge from the club of developpers</p>
+<p>challenge from the club of developpers and scientific circle Math-Info</p>
 
-#### website :
+#### Application e-learning :
 
 <a href="http://club-elearning.herokuapp.com/">club-Elearning </a>
 
@@ -28,7 +28,7 @@ To register the end-point is <strong> /register </strong> , the end-point will r
 #### headers :
 ```javascript
  	{
- 		name,
+ 		username,
  		email,
  		password
  	}
