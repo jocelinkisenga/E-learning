@@ -10,7 +10,7 @@ class CourseController extends Controller
 {
     public function index (){
 
-        $courses = Course::all();
+        $courses = Course::orderBy('id','desc')->get();
         return response()->json(['all courses','course'=>$courses],200);
     }
 
@@ -23,7 +23,7 @@ class CourseController extends Controller
                 'owner_id'=>$user_id,
                 'title'=>$request->title,
                 'description'=>$request->description,
-                'image'=>$request->image,
+                'image'=>$fileName,
             ]);
         return response()->json('course created success',201);
     }

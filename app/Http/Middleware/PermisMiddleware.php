@@ -22,7 +22,7 @@ class PermisMiddleware
 
         $userId = Auth::user()->id;
         $permi = new Permission();
-        $permis = $permi->first()->whereUser_id($userId)->get();
+        $permis = $permi->first();
         
 
         

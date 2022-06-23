@@ -12,7 +12,7 @@ class Course extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['owner_id','title','description','number_chapters'];
+    protected $fillable = ['owner_id','title','description','number_chapters','image'];
 
     public function chapters(){
         return $this->hasMany(Chapter::class);
