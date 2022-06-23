@@ -28,10 +28,10 @@ To register the end-point is <strong> /register </strong> , the end-point will r
  		email,
  		password
  	}
-```
+    ```
 ### login end-point 
 To login the end-point is <strong> /login </strong> , the end-point will return a bear token witch will be used for different requests.
- 	<strong>headers :</strong>
+#### headers :
  	```javascript
  	{
  			email,
