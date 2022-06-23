@@ -2,6 +2,10 @@
 
 <p>challenge from the club of developpers</p>
 
+#### website :
+
+<a href="http://club-elearning.herokuapp.com/courses">club-Elearning </a>
+
 ## purpose
 Build an api backend application for an online learning plate-forme
 
@@ -40,8 +44,8 @@ To login the end-point is <strong> /login </strong> , the end-point will return 
  ```
  
 
-### all Courses end-point : /courses
-<p> To fetch all the courses the end-point is <strong>/courses </strong> whith the http method GET 
+### all Courses end-point : /
+<p> To fetch all the courses the end-point is <strong>/ </strong> whith the http method GET 
 </p>
 
 #### results:

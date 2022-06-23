@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //course routes
-Route::get('/courses',[App\Http\Controllers\CourseController::class, 'index'])->name('home');
+Route::get('/',[App\Http\Controllers\CourseController::class, 'index'])->name('home');
 Route::get('/course/{id}',[App\Http\Controllers\CourseController::class, 'show']);
 
 //chapter routes
