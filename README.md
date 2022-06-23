@@ -87,7 +87,7 @@ To login a user the end-point is <strong> /login </strong> , this end-point will
 ```
 
 ### single course end-point :          /course/course_id/
-To get a single course, use the end point <strong> /course/id_course/ </strong> , with the GET http method.
+To get a single course, use the end point <strong> /course/course_id/ </strong> , with the GET http method.
 #### example of result:
 ```javascript
 {
@@ -122,7 +122,7 @@ To get a single course, use the end point <strong> /course/id_course/ </strong> 
   ```
 
   ### request permission end-point:       /permissions
-  
+
   To request a permission get loged in first.
   The end-point to ask for permission is <strong>/permissions</strong>, with the http method POST,
   This end point helps you to create a course after it's allowed by the admin.<br>
