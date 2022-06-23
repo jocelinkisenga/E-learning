@@ -44,7 +44,7 @@ To login the end-point is <strong> /login </strong> , the end-point will return 
 <p> To fetch all the courses the end-point is <strong>/courses </strong> whith the http method GET 
 </p>
 
-#### results
+#### results:
 ```javascript
 {
     "0": "all courses",
@@ -84,10 +84,10 @@ To login the end-point is <strong> /login </strong> , the end-point will return 
 
 ### single course end-point
 To get a single course, use the end point <strong> /course/id/ </strong> , with the GET http method
-#### result
+#### result:
 ```javascript
 {
-    "0": "all courses",
+    
     "course": [
         {
             "id": 23,
@@ -106,7 +106,7 @@ To get a single course, use the end point <strong> /course/id/ </strong> , with 
   ### create course end-point 
   to create a course you need first to make a request and let the admin allow you.
   The end-point for creating a course is <strong> /course </strong>, with the POST http method.
-  <strong>headers</strong>
+ #### headers
   ```javascript
   {
   	title,
