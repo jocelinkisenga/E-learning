@@ -1,9 +1,9 @@
 # E-learning application
 
-<p>This application for the june challenge from the club of developpers</p>
+<p>challenge from the club of developpers</p>
 
 ## purpose
-Build an api that will help front-end developpers to retreive data from the backend application
+Build an api backend application for an online learning plate-forme
 
 ## Installation
 To install this application run 
