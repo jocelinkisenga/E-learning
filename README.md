@@ -19,7 +19,7 @@ to install composer's dependances
 ## API DOCS (end-points)
 
 ### register end-point 
-To register the end-point is ** /register ** , the end-point will return a bear token witch will be used for different requests.
+To register the end-point is <strong> /register </strong> , the end-point will return a bear token witch will be used for different requests.
  <div>
  	headers :
  	```javascript
@@ -30,19 +30,18 @@ To register the end-point is ** /register ** , the end-point will return a bear 
  	}
 
 ### login end-point 
-To login the end-point is ** /login ** , the end-point will return a bear token witch will be used for different requests.
- <div>
- 	headers :
+To login the end-point is <strong> /login </strong> , the end-point will return a bear token witch will be used for different requests.
+ 	<strong>headers :</strong>
  	```javascript
  	{
  			email,
  			password
  	}
  	```
- </div>
+ 
 
 ### all Courses end-point
-<p> To fetch all the courses the end-point is ** /courses ** whith the http method GET 
+<p> To fetch all the courses the end-point is <strong>/courses </strong> whith the http method GET 
 </p>
 
 <strong>results</strong>
@@ -115,6 +114,11 @@ To get a single course, use the end point <strong> /course/id/ </strong> , with 
   	image
   }
   ```
+
+  ### request permission end-point
+  To request a permission get loged in first.
+  The end-point to ask for permission is <strong>/permissions</strong>, with the http method POST,
+  This end point helps you to create a course after it's allowed by the admin.
 
 
 ## requirements
