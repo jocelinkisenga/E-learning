@@ -22,11 +22,11 @@ class PermisMiddleware
 
         $userId = Auth::user()->id;
         $permi = new Permission();
-        $permis = $permi->first();
+        $permis = $permi->first()->whereUser_id($userId)->get();
         
 
         
-            if ($permis->user_id == $userId)
+            if ($permis)
             {
                return $next($request);
             }
