@@ -119,7 +119,8 @@ To get a single course, use the end point <strong> /course/id/ </strong> , with 
   ### request permission end-point
   To request a permission get loged in first.
   The end-point to ask for permission is <strong>/permissions</strong>, with the http method POST,
-  This end point helps you to create a course after it's allowed by the admin.
+  This end point helps you to create a course after it's allowed by the admin.<br>
+  <i>By defaut the after asking requesting a permission , the route for adding courses will be enabled, no need for the admin to confirm it</i>
 
 
 ## requirements
