@@ -21,7 +21,7 @@ to install composer's dependances
 ### register end-point 
 To register the end-point is <strong> /register </strong> , the end-point will return a bear token witch will be used for different requests.
  
-<strong>headers :</strong>
+#### headers :
  	```javascript
  	{
  		name,
@@ -44,7 +44,7 @@ To login the end-point is <strong> /login </strong> , the end-point will return 
 <p> To fetch all the courses the end-point is <strong>/courses </strong> whith the http method GET 
 </p>
 
-<strong>results</strong>
+#### results
 ```javascript
 {
     "0": "all courses",
@@ -84,7 +84,7 @@ To login the end-point is <strong> /login </strong> , the end-point will return 
 
 ### single course end-point
 To get a single course, use the end point <strong> /course/id/ </strong> , with the GET http method
-<strong>result</strong>
+#### result
 ```javascript
 {
     "0": "all courses",
