@@ -18,7 +18,7 @@ to install composer's dependances
 
 ## API DOCS (end-points)
 
-### register end-point 
+### register end-point : /register
 To register the end-point is <strong> /register </strong> , the end-point will return a bear token witch will be used for different requests.
  
 #### headers :
@@ -29,7 +29,7 @@ To register the end-point is <strong> /register </strong> , the end-point will r
  		password
  	}
 ```
-### login end-point 
+### login end-point : /login
 To login the end-point is <strong> /login </strong> , the end-point will return a bear token witch will be used for different requests.
 #### headers :
  ```javascript
@@ -40,7 +40,7 @@ To login the end-point is <strong> /login </strong> , the end-point will return 
  ```
  
 
-### all Courses end-point
+### all Courses end-point : /courses
 <p> To fetch all the courses the end-point is <strong>/courses </strong> whith the http method GET 
 </p>
 
@@ -82,8 +82,8 @@ To login the end-point is <strong> /login </strong> , the end-point will return 
       }
 ```
 
-### single course end-point
-To get a single course, use the end point <strong> /course/id/ </strong> , with the GET http method
+### single course end-point : /course/id_course/
+To get a single course, use the end point <strong> /course/id_course/ </strong> , with the GET http method
 #### result:
 ```javascript
 {
@@ -103,7 +103,7 @@ To get a single course, use the end point <strong> /course/id/ </strong> , with 
     }
 ```
 
-### create course end-point 
+### create course end-point : /course
   to create a course you need first to make a request and let the admin allow you.
   The end-point for creating a course is <strong> /course </strong>, with the POST http method.
 
@@ -116,7 +116,7 @@ To get a single course, use the end point <strong> /course/id/ </strong> , with 
   }
   ```
 
-  ### request permission end-point
+  ### request permission end-point /permissions
   To request a permission get loged in first.
   The end-point to ask for permission is <strong>/permissions</strong>, with the http method POST,
   This end point helps you to create a course after it's allowed by the admin.<br>
