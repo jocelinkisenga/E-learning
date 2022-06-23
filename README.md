@@ -23,7 +23,7 @@ to install composer's dependances
 ## API DOCS (end-points)
 
 ### register end-point : /register
-To register the end-point is <strong> /register </strong> , the end-point will return a bear token witch will be used for different requests.
+To register a user,  the end-point is <strong> /register </strong> , this end-point will return a bear token witch will be used for different requests.
  
 #### headers :
 ```javascript
@@ -34,7 +34,7 @@ To register the end-point is <strong> /register </strong> , the end-point will r
  	}
 ```
 ### login end-point : /login
-To login the end-point is <strong> /login </strong> , the end-point will return a bear token witch will be used for different requests.
+To login a user the end-point is <strong> /login </strong> , this end-point will return a bear token witch will be used for different requests.
 #### headers :
  ```javascript
  	{
@@ -45,10 +45,10 @@ To login the end-point is <strong> /login </strong> , the end-point will return 
  
 
 ### all Courses end-point : /
-<p> To fetch all the courses the end-point is <strong>/ </strong> whith the http method GET 
+<p> To fetch all  courses,  the end-point is <strong>/ </strong> whith the http method GET, this end-point returns an object of data related to courses. 
 </p>
 
-#### results:
+#### exemple of results:
 ```javascript
 {
     "0": "all courses",
@@ -86,9 +86,9 @@ To login the end-point is <strong> /login </strong> , the end-point will return 
       }
 ```
 
-### single course end-point : /course/id_course/
-To get a single course, use the end point <strong> /course/id_course/ </strong> , with the GET http method
-#### result:
+### single course end-point :          /course/course_id/
+To get a single course, use the end point <strong> /course/id_course/ </strong> , with the GET http method.
+#### example of result:
 ```javascript
 {
     
@@ -107,9 +107,10 @@ To get a single course, use the end point <strong> /course/id_course/ </strong> 
     }
 ```
 
-### create course end-point : /course
-  to create a course you need first to make a request and let the admin allow you.
+### create course end-point :          /course
+  to create a course you need first to make a request (permission) and let the admin allow you.
   The end-point for creating a course is <strong> /course </strong>, with the POST http method.
+
 
 #### headers
   ```javascript
@@ -120,7 +121,8 @@ To get a single course, use the end point <strong> /course/id_course/ </strong> 
   }
   ```
 
-  ### request permission end-point /permissions
+  ### request permission end-point:       /permissions
+  
   To request a permission get loged in first.
   The end-point to ask for permission is <strong>/permissions</strong>, with the http method POST,
   This end point helps you to create a course after it's allowed by the admin.<br>
