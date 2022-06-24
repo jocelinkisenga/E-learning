@@ -11,9 +11,9 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function all_courses()
     {
-        //
+        
     }
 
     /**
@@ -21,7 +21,7 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function all_users()
     {
         //
     }
@@ -32,7 +32,7 @@ class AdminController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function all_permissions(Request $request)
     {
         //
     }
@@ -43,7 +43,7 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function all_comments()
     {
         //
     }
@@ -54,7 +54,7 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
         //
     }
