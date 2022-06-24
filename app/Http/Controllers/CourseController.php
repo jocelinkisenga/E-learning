@@ -15,7 +15,7 @@ class CourseController extends Controller
 
     public function store(Request $request){
         $fileName = time().'_'.$request->file('image')->getClientOriginalName();
-        $path=$request->file('image')->storeAs('uploads', $fileName, 'public');
+        $path=$request->file('image')->storeAs('images',$fileName,'public_uploads');
         $user_id = Auth::user()->id;
         Course::create([
                 'owner_id'=>$user_id,
