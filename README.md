@@ -128,6 +128,11 @@ To get a single course, use the end point <strong> /course/course_id/ </strong> 
   This end point helps you to create a course after it's allowed by the admin.<br>
   <i>By defaut the after asking requesting a permission , the route for adding courses will be enabled, no need for the admin to confirm it</i>
 
+  ### Image link :
+
+  Images are stored in the folder <strong>uploads/images/ </strong>.
+  use the link with an end-point like :<b> /uploads/images/file_name<b>
+
 
 ## requirements
 > php v8
