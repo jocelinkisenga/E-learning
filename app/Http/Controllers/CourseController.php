@@ -9,7 +9,6 @@ use Auth;
 class CourseController extends Controller
 {
     public function index (){
-
         $courses = Course::orderBy('id','desc')->get();
         return response()->json(['course'=>$courses],200);
     }
@@ -17,7 +16,6 @@ class CourseController extends Controller
     public function store(Request $request){
         $fileName = time().'_'.$request->file('image')->getClientOriginalName();
         $path=$request->file('image')->storeAs('uploads', $fileName, 'public');
-
         $user_id = Auth::user()->id;
         Course::create([
                 'owner_id'=>$user_id,
