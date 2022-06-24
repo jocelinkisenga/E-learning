@@ -9,7 +9,7 @@ use Auth;
 
 class ProfileController extends Controller
 {
-    public function user_courses(){
+    public function index(){
        $user_id = Auth::user()->id;
        $course = Course::whereOwner_id($user_id);
        return response()->json($course);

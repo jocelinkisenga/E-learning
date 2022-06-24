@@ -9,7 +9,7 @@ use Auth;
 
 class KitCourseController extends Controller
 {
-    //
+    
     public function index(){
         $kitcourses = KitCourse::all();
         return response()->json(['kits'=>$kitcourses],200);
