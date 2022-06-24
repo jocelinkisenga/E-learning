@@ -23,10 +23,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[App\Http\Controllers\CourseController::class, 'index'])->name('home');
 Route::get('/course/{id}',[App\Http\Controllers\CourseController::class, 'show']);
 
-//chapter routes
-/*Route::get('/chapter',[App\Http\Controllers\ChapterController::class, 'index']);
-Route::post('/chapter',[App\Http\Controllers\ChapterController::class, 'store']);
-Route::get('/chapter/{id}',[App\Http\Controllers\ChapterController::class, 'show']);*/
 
 
 // user routes
@@ -48,6 +44,5 @@ Route::middleware(['auth:sanctum'])->group(function(){
 Route::middleware(['auth:sanctum','admin'])->group(function(){
     Route::get('/non-permis',[App\Http\Controllers\PermissionController::class, 'index']);
     Route::put('/permissions/{id}',[App\Http\Controllers\PermissionController::class, 'edit']);
-    Route::get('/permis',[App\Http\Controllers\PermissionController::class, 'allowed']);
-    
+    Route::get('/permis',[App\Http\Controllers\PermissionController::class, 'allowed']);   
 });
