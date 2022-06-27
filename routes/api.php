@@ -39,6 +39,7 @@ Route::middleware(['auth:sanctum'])->group(function(){
     Route::post('/subscribe/{id}',[App\Http\Controllers\KitCourseController::class, 'store']);
     Route::get('/subscribe',[App\Http\Controllers\KitCourseController::class, 'index']);
     Route::get('/user', [App\Http\Controllers\ProfileController::class, 'user_courses']);
+    Route::post('/user', [App\Http\Controllers\CommentController::class, 'store']);
 });
 
 Route::middleware(['auth:sanctum','admin'])->group(function(){
