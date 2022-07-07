@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comment;
 use Illuminate\Http\Request;
+use App\Http\Resources\CommentResource;
 
 
 class CommentController extends Controller
@@ -26,12 +27,12 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        Comment::create([
+        $comment = Comment::create([
                 'user_id'=>$request->user_id,
                 'course_id'=>$request->course_id,
                 'commentaire'=>$request->commentaire
             ]);
-        return response()->json("comment created successfully");
+        return new CommentResource($comment);
     }
 
     /**

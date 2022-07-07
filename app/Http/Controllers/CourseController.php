@@ -18,7 +18,7 @@ class CourseController extends Controller
     public function store(Request $request){
        $course = CourseRepositorie::store_course($request);
         
-        return CourseResource($course);
+        return new CourseResource($course);
     }
 
     public function show(int $id){

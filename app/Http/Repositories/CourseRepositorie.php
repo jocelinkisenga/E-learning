@@ -10,11 +10,12 @@ class CourseRepositorie{
 			$fileName = time().'_'.$request->file('image')->getClientOriginalName();
         	$path=$request->file('image')->storeAs('images',$fileName,'public_uploads');
      		$user_id = Auth::user()->id;
-		        Course::create([
+		     $course =  Course::create([
 		                'owner_id'=>$user_id,
 		                'title'=>$request->title,
 		                'description'=>$request->description,
 		                'image'=>$fileName,
 		            ]);
+		     return $course;
 	}
 }
