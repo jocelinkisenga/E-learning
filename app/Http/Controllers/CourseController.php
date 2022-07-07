@@ -5,29 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Course;
 use Auth;
+use App\Http\Resources\CourseResource;
+use App\Http\Repositories\CourseRepositorie;
 
 class CourseController extends Controller
 {
     public function index (){
         $courses = Course::orderBy('id','desc')->get();
-        return response()->json(['course'=>$courses],200);
+        return CourseResource::collection($courses);
     }
 
     public function store(Request $request){
-        $fileName = time().'_'.$request->file('image')->getClientOriginalName();
-        $path=$request->file('image')->storeAs('images',$fileName,'public_uploads');
-        $user_id = Auth::user()->id;
-        Course::create([
-                'owner_id'=>$user_id,
-                'title'=>$request->title,
-                'description'=>$request->description,
-                'image'=>$fileName,
-            ]);
-        return response()->json('course created success',201);
+       $course = CourseRepositorie::store_course($request);
+        
+        return CourseResource($course);
     }
 
     public function show(int $id){
-        $course = Course::find($id);
-            return response()->json(['course'=>$course],201);
+        $course = Course::findOrFail($id);
+            return new CourseResource($course);
     }
 }

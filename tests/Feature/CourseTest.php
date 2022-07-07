@@ -13,9 +13,9 @@ class CourseTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_has_permission()
     {
-        $response = $this->get('/course/2/');
+        $response = $this->get('/');
 
         $response->assertStatus(200);
             }

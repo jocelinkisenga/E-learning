@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //course routes
-Route::get('/',[App\Http\Controllers\CourseController::class, 'index'])->name('home');
+Route::get('courses',[App\Http\Controllers\CourseController::class, 'index'])->name('home');
 Route::get('/course/{id}',[App\Http\Controllers\CourseController::class, 'show']);
 
 
@@ -38,9 +38,10 @@ Route::middleware(['auth:sanctum'])->group(function(){
     Route::post('/me', [App\Http\Controllers\AuthController::class, 'me']);
     Route::post('/subscribe/{id}',[App\Http\Controllers\KitCourseController::class, 'store']);
     Route::get('/subscribe',[App\Http\Controllers\KitCourseController::class, 'index']);
-    Route::get('/user', [App\Http\Controllers\ProfileController::class, 'user_courses']);
+    
     Route::post('/user', [App\Http\Controllers\CommentController::class, 'store']);
 });
+Route::get('/user', [App\Http\Controllers\ProfileController::class, 'user_courses']);
 
 Route::middleware(['auth:sanctum','admin'])->group(function(){
     Route::get('/non-permis',[App\Http\Controllers\PermissionController::class, 'index']);
