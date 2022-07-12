@@ -11,7 +11,7 @@ use App\Http\Repositories\CourseRepositorie;
 class CourseController extends Controller
 {
     public function index (){
-        $courses = Course::orderBy('id','desc')->get();
+        $courses = Course::all();
         return CourseResource::collection($courses);
     }
 
