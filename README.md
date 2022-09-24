@@ -3,9 +3,7 @@
 <p>challenge from the club of developpers</p>
 
 #### website :
-
 <a href="http://club-elearning.herokuapp.com/">club-Elearning </a>
-
 ## purpose
 Build an api backend application for an online learning plate-forme
 
