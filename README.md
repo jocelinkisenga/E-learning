@@ -17,9 +17,7 @@ And navigate to the application folder then run
 composer install 
 ```
 to install composer's dependances
-
 ## API DOCS (end-points)
-
 ### register end-point : /register
 To register a user,  the end-point is <strong> /register </strong> , this end-point will return a bear token witch will be used for different requests.
  
