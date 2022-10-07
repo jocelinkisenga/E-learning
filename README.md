@@ -134,4 +134,4 @@ To get a single course, use the end point <strong> /course/course_id/ </strong> 
 > php v8
 > laravel 9
 
-<strong> build with love by Jocelin kisenga </strong>
+<strong> build with love by Jocelin kisenga  from lushidev</strong>
